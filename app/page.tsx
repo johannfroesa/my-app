@@ -27,7 +27,7 @@ export default async function Home() {
             </span>
 
             <h1 className="mt-8 text-3xl font-extrabold tracking-tight lg:text-6xl">
-              Analyze your Audience's interest
+              Analyze your Audience
             </h1>
             <p className="max-xl mx-auto mt-8 text-base lg:text-xl text-secondary-foreground">
               Use Ad Manager Data to find out what second your audience loses interest to optimize your ads, content and communication strategy.

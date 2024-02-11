@@ -13,7 +13,7 @@ export default async function Home() {
   const { isAuthenticated } = getKindeServerSession ();
 
   if(await isAuthenticated()) {
-    return redirect ('/dashboard');
+    return redirect ("/dashboard");
   }
   return (
     <section className="flex items-center justify-center bg-background h-[90vh]">

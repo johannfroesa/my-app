@@ -9,8 +9,6 @@ import { revalidatePath, unstable_noStore as noStore } from "next/cache";
 
 
 async function getData(userId: string){
-    noStore();
-if(userId) {
     const data = await prisma.user.findUnique({
         where: {
             id: userId,
@@ -20,9 +18,8 @@ if(userId) {
             email: true,
             colorScheme: true,
         },
-    })
+    });
     return data;
-}
 }
 
 export default async function settingsPage(){
@@ -39,13 +36,13 @@ export default async function settingsPage(){
 
         await prisma.user.update({
             where: {
-                id: user?.id
+                id: user?.id,
             },
             data: {
                 name:name ?? undefined,
                 colorScheme: colorScheme ?? undefined,
             }
-        })
+        });
         revalidatePath("/", "layout")
     }
 

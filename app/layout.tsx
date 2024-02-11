@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 };
 
 async function getData(userId: string){
-
+  if(userId){
   const data = await prisma.user.findUnique({
     where: {
       id: userId,
@@ -26,6 +26,7 @@ async function getData(userId: string){
     },
   });
 return data;
+}
 }
 
 export default async function RootLayout({

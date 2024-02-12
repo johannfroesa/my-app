@@ -92,7 +92,7 @@ export default async function settingsPage(){
                                           </SelectTrigger>
                                           <SelectContent>
                                             <SelectGroup>
-                                                <SelectLabel> Color</SelectLabel>
+                                                <SelectLabel>Color</SelectLabel>
                                                 <SelectItem value = "theme-green">Green</SelectItem>
                                                 <SelectItem value = "theme-blue">Blue</SelectItem>
                                                 <SelectItem value = "theme-orange">Orange</SelectItem>

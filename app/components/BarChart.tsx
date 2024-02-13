@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { Bar, BarChart as BarGraph, CartesianGrid, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
+import { ThemeProvider } from "./theme-provider";
 
 type Props = {};
 const data = [
@@ -206,7 +207,7 @@ const data = [
 
 export default function BarChart( {}: Props) {
     return (
-        <ResponsiveContainer width={"100%"} height={400}>
+        <ResponsiveContainer width={"100%"} height={300}>
             <BarGraph data={data}>
                 <XAxis dataKey="name" 
                 tickLine={false}
@@ -219,7 +220,7 @@ export default function BarChart( {}: Props) {
                   axisLine={false}
                   stroke="#fff"
                   fontSize={12}/>
-                <Bar dataKey="age" radius={[4,4,0,0]} fill="#fff" />
+                <Bar dataKey="age" radius={[4,4,0,0]} fill="#fff"/>
             </BarGraph>
         </ResponsiveContainer>
     )

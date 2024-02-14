@@ -1,5 +1,6 @@
 // This is your Prisma schema file,
 // learn more about it in the docs: https://pris.ly/d/prisma-schema
+// to update the Schema run % npx prisma generate and then % npx prisma db push
 
 datasource db {
   provider  = "postgresql"
@@ -17,4 +18,23 @@ model User {
   email            String  @unique
   stripeCustomerId String? @unique
   colorScheme      String?  @default("theme-orange")
+}
+
+
+model Ad {
+  id        Int      @id
+  createdAt DateTime
+  updatedAt DateTime
+  published Boolean
+  name     String
+  V25     Int   
+  V50     Int
+  V75     Int
+  V95    Int
+  V100    Int
+}
+
+model Video {
+  id        Int      @id
+  duration Int
 }

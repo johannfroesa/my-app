@@ -19,7 +19,7 @@ export default async function BarChart( { data } : { data: any }) {
                   axisLine={false}
                   stroke="#fff"
                   fontSize={12}/>
-                <Bar dataKey="age" radius={[4,4,0,0]} fill="#fff"/>
+                <Bar dataKey="V25" radius={[4,4,0,0]} fill="#fff"/>
             </BarGraph>
         </ResponsiveContainer>
     )

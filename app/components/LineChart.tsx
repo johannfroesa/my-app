@@ -15,6 +15,7 @@ export default function LinesChart({ data } : { data: any }) {
                 <YAxis stroke="#fff"/>
                 <Line type="monotone" dataKey="V95" stroke="#fff" />
                 <Line type="monotone" dataKey="V100" stroke="#329838" />
+                <Line type="monotone" dataKey="V50" stroke="#999838" />
             </LineChart>
         </ResponsiveContainer>
     )

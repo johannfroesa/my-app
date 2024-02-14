@@ -5,7 +5,7 @@ import { promises as fs } from 'fs';
 
 
 export default async function DashboardPage(){
-    const file = await fs.readFile(process.cwd() + '/app/randomdata/randomdatatest.json', 'utf8');
+    const file = await fs.readFile(process.cwd() + '/public/randomdata/randomdatatest.json', 'utf8');
     const data = JSON.parse(file);
     console.log(data);
 

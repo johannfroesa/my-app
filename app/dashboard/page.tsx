@@ -1,21 +1,11 @@
 import BarChart from "../components/BarChart";
 import LineChart from "../components/LineChart";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { promises as fs } from 'fs';
 import prisma from "../lib/db";
-import { unstable_noStore as noStore } from "next/cache";
-import { Ad } from "@prisma/client";
-
-
-
-export async function getData(){
-    const Ad = await prisma.ad.findMany();
-    return Ad
-}
 
 
 export default async function Dashboard(){
-    const data = await getData();
+    const data = await prisma.ad.findMany();
     return(
     <div className="grid items-start gap-8">
             <h1 className="text-2xl md:text-2xl">Dashboard</h1>

@@ -13,7 +13,8 @@ export default function LinesChart({ data } : { data: any }) {
             >
                 <XAxis dataKey="name" stroke="#fff"/>
                 <YAxis stroke="#fff"/>
-                <Line type="monotone" dataKey="age" stroke="#fff" />
+                <Line type="monotone" dataKey="V95" stroke="#fff" />
+                <Line type="monotone" dataKey="V100" stroke="#329838" />
             </LineChart>
         </ResponsiveContainer>
     )
